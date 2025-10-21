@@ -2,10 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Specialists = () => {
-  const navigate = useNavigate();
 
   const specialists = [
     {
@@ -104,13 +103,12 @@ const Specialists = () => {
                     </div>
                   </div>
 
-                  <Button 
-                    className="w-full mt-4 bg-primary hover:bg-primary/90 text-white"
-                    onClick={() => navigate('/booking')}
-                  >
-                    Записаться на консультацию
-                    <Icon name="Calendar" className="ml-2" size={18} />
-                  </Button>
+                  <Link to="/booking">
+                    <Button className="w-full mt-4 bg-primary hover:bg-primary/90 text-white">
+                      Записаться на консультацию
+                      <Icon name="Calendar" className="ml-2" size={18} />
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

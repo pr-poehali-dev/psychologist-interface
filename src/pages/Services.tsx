@@ -2,10 +2,9 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import Icon from "@/components/ui/icon";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Services = () => {
-  const navigate = useNavigate();
 
   const services = [
     {
@@ -120,12 +119,11 @@ const Services = () => {
                     </ul>
                   </div>
 
-                  <Button 
-                    className="w-full bg-primary hover:bg-primary/90 text-white"
-                    onClick={() => navigate('/booking')}
-                  >
-                    Записаться
-                  </Button>
+                  <Link to="/booking">
+                    <Button className="w-full bg-primary hover:bg-primary/90 text-white">
+                      Записаться
+                    </Button>
+                  </Link>
                 </div>
               </CardContent>
             </Card>
