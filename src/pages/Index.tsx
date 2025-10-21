@@ -1,5 +1,3 @@
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
@@ -77,8 +75,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
+    <div className="flex flex-col">
       
       <main className="flex-grow">
         <section className="relative py-20 md:py-32 overflow-hidden">
@@ -274,8 +271,6 @@ const Index = () => {
           </div>
         </section>
       </main>
-
-      <Footer />
     </div>
   );
 };
